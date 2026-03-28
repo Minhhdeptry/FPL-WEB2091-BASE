@@ -1,4 +1,29 @@
 {
-  "movies": [],
+  "courses": [
+    {
+      "title": "dien cai gi di nua update xong di",
+      "id": 1
+    },
+    {
+      "title": "thmem",
+      "id": 2
+    },
+    {
+      "title": "123",
+      "id": 3
+    },
+    {
+      "title": "day la edit",
+      "id": 4
+    },
+    {
+      "title": "them moi",
+      "id": 5
+    },
+    {
+      "title": "them moi nua di dang update",
+      "id": 6
+    }
+  ],
   "users": []
 }
