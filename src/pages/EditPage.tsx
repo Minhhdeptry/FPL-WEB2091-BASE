@@ -10,7 +10,7 @@ function EditPage() {
 
   if (!id) return;
   const query = useQuery({
-    queryKey: ['booking', id],
+    queryKey: ['bookings', id],
     queryFn: () => getById(id)
   });
 
@@ -25,11 +25,13 @@ function EditPage() {
   const mutation = useMutation({
     mutationFn: (data: Omit<Bookings, "id">) => edit(id, data),
     onSuccess: () => {
-      (queryClient.invalidateQueries({ queryKey: ["booking"] }),
+      (queryClient.invalidateQueries({ queryKey: ["bookings"] }),
         nav("/bookings"));
     },
   });
   const handleSubmit = (value: any) => {
+    console.log(value);
+    
     mutation.mutate(value);
   };
   return (
@@ -54,9 +56,9 @@ function EditPage() {
         <Form.Item
           label="Service"
           name="service"
-          rules={[{ required: true, message: "Vui lòng chọn service" }]}
+          rules={[{ required: true, message: "Vui lòng nhập service!" }]}
         >
-          <Select options={[{ label: "Sửa điện", value:"Sửa điện" }, {label: "Vệ sinh", value:"Vệ sinh"}]} />
+          <Input type="text" />
         </Form.Item>
 
         <Form.Item

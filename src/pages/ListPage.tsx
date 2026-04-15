@@ -6,14 +6,14 @@ import { Link } from "react-router-dom";
 function ListPage() {
     const queryClient = useQueryClient()
     const query = useQuery({
-      queryKey: ['booking'],
+      queryKey: ['bookings'],
       queryFn: getAll
     })
 
     const mutation = useMutation({ 
       mutationFn: remove,
       onSuccess: () => {
-        queryClient.invalidateQueries({queryKey: ['booking']})
+        queryClient.invalidateQueries({queryKey: ['bookings']})
       }
     })
 

@@ -1,4 +1,23 @@
 {
-  "movies": [],
+  "bookings": [
+    {
+      "id": "b1",
+      "customer": "Nguyen Van A",
+      "service": "Sửa điện",
+      "status": "pending"
+    },
+    {
+      "id": "b2",
+      "customer": "Tran Thi B",
+      "service": "Vệ sinh máy lạnh",
+      "status": "confirmed"
+    },
+    {
+      "customer": "abc",
+      "service": "abc",
+      "status": "pending",
+      "id": "rcqFq9T"
+    }
+  ],
   "users": []
 }

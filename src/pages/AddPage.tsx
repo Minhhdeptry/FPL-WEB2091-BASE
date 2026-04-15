@@ -10,7 +10,7 @@ function AddPage() {
   const mutation = useMutation({
     mutationFn: add,
     onSuccess: () => {
-      (queryClient.invalidateQueries({ queryKey: ["booking"] }),
+      (queryClient.invalidateQueries({ queryKey: ["bookings"] }),
         nav("/bookings"));
     },
   });
@@ -37,16 +37,18 @@ function AddPage() {
 
         <Form.Item
           label="Service"
-          rules={[{ required: true, message: "Vui lòng chọn service" }]}
+          name="service"
+          rules={[{ required: true, message: "Vui lòng nhập service!" }]}
         >
-          <Select options={[{ label: "Sửa điện" }, {label: "Vệ sinh"}]} />
+          <Input type="text" />
         </Form.Item>
 
         <Form.Item
           label="Status"
+          name="status"
           rules={[{ required: true, message: "Vui lòng chọn trạng thái" }]}
         >
-          <Select options={[{ label: "pending" }, { label: "confirmed" }]} />
+          <Select options={[{ label: "pending", value:"pending" }, { label: "confirmed", value:"confirmed" }]} />
         </Form.Item>
 
         <Form.Item label={null}>
