@@ -1,4 +1,22 @@
 {
-  "movies": [],
-  "users": []
+  "bookings": [
+    {
+      "customer": "Nguyen Van A",
+      "service": "Sửa điện",
+      "status": "confirmed",
+      "id": "b1"
+    }
+  ],
+  "users": [
+    {
+      "email": "minhdeptry@gmail.com",
+      "password": "$2a$10$RHF95nN2bT1Mmyoy0AJBKexW95OAmh18mmo1U8KHGwTyjpd3V3qRq",
+      "id": 1
+    },
+    {
+      "email": "minhdz@gmail.com",
+      "password": "$2a$10$6z0g06rgHzMEOcOql2Nq4O92xf58fB3HC.0cyvzT07CSAEhip3GRO",
+      "id": 2
+    }
+  ]
 }
